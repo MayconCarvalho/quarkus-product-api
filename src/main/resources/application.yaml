@@ -1,0 +1,30 @@
+# Database configuration
+quarkus:
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/productdb
+  hibernate-orm:
+    database:
+      generation: update
+  swagger-ui:
+    always-include: true
+    path: /swagger-ui
+  http:
+    port: 8080
+    cors: true
+
+# OpenAPI configuration
+mp:
+  openapi:
+    extensions:
+      smallrye:
+        info:
+          title: Product API
+          version: 1.0.0
+          description: API for managing products
+          contact:
+            name: API Support
+            email: support@example.com
